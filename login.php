@@ -93,7 +93,7 @@
                     <div class="remember-forgot">
                         <label for=""><input type="checkbox">I agree the terms & conditions </label>
                     </div>
-                    <button type="submit" name="reg_user" class="btn">Login</button>
+                    <button type="submit" name="reg_user" class="btn">Register</button>
                     <div class="login-register">
                         <p>Already have a account? <a href="#" class="login-link">Login</a></p>
                     </div>

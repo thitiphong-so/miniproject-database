@@ -178,27 +178,6 @@ if(isset($_GET['Topic_ID'])){
                                             <a href="editcomment.php?Comment_ID=<?php echo $Comment_ID?>&Topic_ID=<?php echo $Topic_ID?>" type="submit" name="edit_now" class="btn-edit" id="editcomment">Editcomment</a>
                                             <!-- <a href="#?Comment_ID=<?php echo $Comment_ID?>&Topic_ID=<?php echo $Topic_ID?>" type="submit" name="edit_now" class="btn" id="editcomment">Editcomment</a> -->
                                             <a href="delete_comment.php?Comment_ID=<?php echo $Comment_ID?>&Topic_ID=<?php echo $Topic_ID?>" type="submit" name="detele" class="btn-del" >Delete</a>
-                                            
-                                            <?php 
-                                                if (isset($_POST['updatecomments'])){
-                                                    // echo "addtopic pass 1";
-                                                    $Comment_detail = mysqli_real_escape_string($conn, $_POST['Comment_detail']);
-                                                    // echo "error pass2";
-                                                    $sqlupdate ="UPDATE comments SET Comment_detail='$Comment_detail' WHERE Comment_ID=$Comment_ID;";
-                                                    mysqli_query($conn, $sqlupdate);
-                                                    ?>
-                                                    <script type="text/javascript">
-                                                        window.location="view.php?Topic_ID=<?php echo $Topic_ID ?>";
-                                                    </script> 
-                                                    <?php } ?>
-
-                                        </div>     
-                                            <script>
-                                            // post //
-                                            document.getElementById("editcomment").addEventListener("click", function(){
-                                            document.querySelector(".popup1").style.display = "flex";
-                                            })
-                                            </script>
                                             <?php 
                                             }}?>
                                     </div>        
@@ -283,8 +262,7 @@ if(isset($_GET['Topic_ID'])){
             window.location="view.php?Topic_ID=<?php echo $Topic_ID ?>";
         </script> 
         <?php } ?>
-      
-        
+          
     <?php
     if (isset($_POST['comments'])){
     $Comment_detail = $_POST['Comment_detail'];

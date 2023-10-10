@@ -47,8 +47,8 @@
             header('location: index.php');
         } else {
             array_push($errors, "Username or Email already exists");
-            $_SESSION['error'] = "Username or Email already exists";
-            header("location: register.php");
+            $_SESSION['error'] = "Username or Email already have";
+            header("location: login.php");
         }
     }
 
